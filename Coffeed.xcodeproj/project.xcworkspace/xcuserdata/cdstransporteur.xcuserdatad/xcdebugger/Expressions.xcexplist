@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "-[FeedViewController tableView:numberOfRowsInSection:]:FeedViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "menuSource.count &gt; 0 ? menuSource.count : 1">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[HomeViewController retrievePosition]:HomeViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "CLLocationManager">
+            </PersistentString>
+            <PersistentString
+               value = "[CLLocationManager locationServicesEnabled] != NO">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
