@@ -21,6 +21,11 @@
     return [NSString stringWithCString:systemInfo.machine
                               encoding:NSUTF8StringEncoding];
 }
++(BOOL)isHighSize {
+    return ([[self machineName] isEqualToString:@"iPhone5,1"]  || [[self machineName] isEqualToString:@"iPhone5,2"]
+        || [[self machineName] isEqualToString:@"iPhone5,3"] || [[self machineName] isEqualToString:@"iPhone5,4"]
+            || [[self machineName] isEqualToString:@"iPhone6,2"] || [[self machineName] isEqualToString:@"iPhone6,2"]|| [[self machineName] isEqualToString:@"iPod5,1"]);
+}
 
 +(BOOL)isNetworkActivated {
     return ([self isNetworkEnabled] && [self isAPIReachable]);

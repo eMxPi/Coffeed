@@ -12,6 +12,8 @@
 #import "FeedCell.h"
 #import "Feed.h"
 #import "MachineUtil.h"
+#import "DayCell.h"
+#import "Feed.h"
 
 @interface FeedTableViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, ArticleViewControllerDelegate> {
     ArticleViewController *articleView;

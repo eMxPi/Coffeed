@@ -15,6 +15,7 @@
     NSString *content;
     NSString *date;
     NSString *url;
+    BOOL isDay;
 }
 @property (nonatomic, retain) NSString *titre;
 @property (nonatomic, retain) NSString *source;
@@ -22,5 +23,6 @@
 @property (nonatomic, retain) NSString *content;
 @property (nonatomic, retain) NSString *date;
 @property (nonatomic, retain) NSString *url;
+@property (nonatomic) BOOL isDay;
 
 @end

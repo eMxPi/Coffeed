@@ -43,7 +43,12 @@
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (tableView == feedTableView) {
-        return 70;
+        Feed *feed = [feedSource objectAtIndex:indexPath.row];
+        if (feed.isDay) {
+            return 44;
+        } else {
+            return 70;
+        }
     } else {
         return 0;
     }
@@ -94,15 +99,36 @@
             }
         }
     }
+    NSString *cellDayIdentifier = @"dayCell";
+    DayCell *cellDay = [tableView dequeueReusableCellWithIdentifier:cellDayIdentifier];
+    if (cellDay == nil) {
+        
+        NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"DayCell" owner:nil options:nil];
+        
+        for(id currentObject in topLevelObjects)
+        {
+            if([currentObject isKindOfClass:[DayCell class]])
+            {
+                cellDay = (DayCell *)currentObject;
+                break;
+            }
+        }
+    }
     if (feedSource != nil && [feedSource count] > 0) {
-        cell.titre.adjustsFontSizeToFitWidth = YES;
-        cell.resume.adjustsFontSizeToFitWidth = YES;
-        cell.source.adjustsFontSizeToFitWidth = YES;
         Feed *feed = [feedSource objectAtIndex:indexPath.row];
-        [cell.titre setText:feed.titre];
-        [cell.resume setText:feed.resume];
-        [cell.source setText:feed.source];
-        return cell;
+        if (feed.isDay) {
+            [cellDay.dayLabel setText:feed.titre];
+            cellDay.dayLabel.adjustsFontSizeToFitWidth = YES;
+            return  cellDay;
+        } else {
+            cell.titre.adjustsFontSizeToFitWidth = YES;
+            cell.resume.adjustsFontSizeToFitWidth = YES;
+            cell.source.adjustsFontSizeToFitWidth = YES;
+            [cell.titre setText:feed.titre];
+            [cell.resume setText:feed.resume];
+            [cell.source setText:feed.source];
+            return cell;
+        }
     } else {
         cellEmpty.message.adjustsFontSizeToFitWidth = YES;
         [cellEmpty.message setText:@"All read, enjoy your coffee!"];
@@ -113,29 +139,29 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     /*Feed *feed = [feedSource objectAtIndex:indexPath.row];
-    
-    if ([MachineUtil isNetworkActivated]) {
-        if (!articleView) {
-            if ([[MachineUtil machineName] isEqualToString:@"iPhone5,2"] || [[MachineUtil machineName] isEqualToString:@"iPhone6,2"]) {
-                articleView = [[self storyboard] instantiateViewControllerWithIdentifier:@"articleViewController"];
-            } else {
-                articleView = [[self storyboard] instantiateViewControllerWithIdentifier:@"articleViewController"];
-            }
-        }
-        articleView.delegate = self;
-        NSMutableArray *articleSource = [[NSMutableArray alloc] init];
-        [articleSource addObject:feed];
-        articleView.articleSource = articleSource;
-        articleView.titleArticle = feed.titre;
-        articleView.text = feed.content;
-        [articleView.view setFrame:CGRectMake(320, 0, articleView.view.frame.size.width, articleView.view.frame.size.height)];
-        [self.view addSubview:articleView.view];
-        [UIView beginAnimations:nil context:nil];
-        [UIView setAnimationDuration:1.0];
-        [UIView setAnimationDelegate:self];
-        [articleView.view setFrame:CGRectMake(0, 0, articleView.view.frame.size.width, articleView.view.frame.size.height)];
-        [UIView commitAnimations];
-    }*/
+     
+     if ([MachineUtil isNetworkActivated]) {
+     if (!articleView) {
+     if ([MachineUtil isHighSize]) {
+     articleView = [[self storyboard] instantiateViewControllerWithIdentifier:@"articleViewController"];
+     } else {
+     articleView = [[self storyboard] instantiateViewControllerWithIdentifier:@"articleViewController"];
+     }
+     }
+     articleView.delegate = self;
+     NSMutableArray *articleSource = [[NSMutableArray alloc] init];
+     [articleSource addObject:feed];
+     articleView.articleSource = articleSource;
+     articleView.titleArticle = feed.titre;
+     articleView.text = feed.content;
+     [articleView.view setFrame:CGRectMake(320, 0, articleView.view.frame.size.width, articleView.view.frame.size.height)];
+     [self.view addSubview:articleView.view];
+     [UIView beginAnimations:nil context:nil];
+     [UIView setAnimationDuration:1.0];
+     [UIView setAnimationDelegate:self];
+     [articleView.view setFrame:CGRectMake(0, 0, articleView.view.frame.size.width, articleView.view.frame.size.height)];
+     [UIView commitAnimations];
+     }*/
     
     NSDictionary *userInfo = [NSDictionary dictionaryWithObject:[NSNumber numberWithInt:indexPath.row] forKey:@"feed"];
     [[NSNotificationCenter defaultCenter] postNotificationName:@"displayFeed" object:nil userInfo:userInfo];

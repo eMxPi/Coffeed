@@ -90,7 +90,7 @@
 -(void)makeScrollView {
     
     if (!emptyView) {
-        if ([[MachineUtil machineName] isEqualToString:@"iPhone5,2"] || [[MachineUtil machineName] isEqualToString:@"iPhone6,2"]) {
+        if ([MachineUtil isHighSize]) {
             emptyView = [[self storyboard] instantiateViewControllerWithIdentifier:@"emptyViewController"];
         } else {
             emptyView = [[self storyboard] instantiateViewControllerWithIdentifier:@"emptyViewController"];
@@ -100,7 +100,7 @@
     [contentScrollView addSubview:emptyView.view];
     
     if (!resumeViewController) {
-        if ([[MachineUtil machineName] isEqualToString:@"iPhone5,2"] || [[MachineUtil machineName] isEqualToString:@"iPhone6,2"]) {
+        if ([MachineUtil isHighSize]) {
             resumeViewController = [[self storyboard] instantiateViewControllerWithIdentifier:@"resumeViewController"];
         } else {
             resumeViewController = [[self storyboard] instantiateViewControllerWithIdentifier:@"resumeViewController"];
@@ -111,8 +111,8 @@
     [resumeViewController.unreadText setText:[self makeFeedText]];
     [contentScrollView addSubview:resumeViewController.view];
     
-    if (!dayView) {
-        if ([[MachineUtil machineName] isEqualToString:@"iPhone5,2"] || [[MachineUtil machineName] isEqualToString:@"iPhone6,2"]) {
+    /*if (!dayView) {
+        if ([MachineUtil isHighSize]) {
             dayView = [[self storyboard] instantiateViewControllerWithIdentifier:@"dayViewController"];
         } else {
             dayView = [[self storyboard] instantiateViewControllerWithIdentifier:@"dayViewController"];
@@ -120,20 +120,30 @@
     }
     [dayView.view setFrame:CGRectMake(0, 466, 320, 44)];
     [dayView.dayLabel setText:@"Today"];
-    [contentScrollView addSubview:dayView.view];
+    [contentScrollView addSubview:dayView.view];*/
     
+    // Reformat Table Feed with Day
+    [self formatFeedTable];
     if (!tableFeedView) {
-        if ([[MachineUtil machineName] isEqualToString:@"iPhone5,2"] || [[MachineUtil machineName] isEqualToString:@"iPhone6,2"]) {
+        if ([MachineUtil isHighSize]) {
             tableFeedView = [[self storyboard] instantiateViewControllerWithIdentifier:@"feedTableViewController"];
         } else {
             tableFeedView = [[self storyboard] instantiateViewControllerWithIdentifier:@"feedTableViewController"];
         }
     }
-    [tableFeedView.view setFrame:CGRectMake(0, 510, 320, 523)];
+    [tableFeedView.view setFrame:CGRectMake(0, 466, 320, 523)];
     tableFeedView.feedSource = feedSource;
     [contentScrollView addSubview:tableFeedView.view];
-    contentScrollView.contentSize = CGSizeMake(320, 1033);
-    
+    contentScrollView.contentSize = CGSizeMake(320, 999);
+}
+
+-(void)formatFeedTable {
+    NSMutableArray *array = [[NSMutableArray alloc] init];
+    for (int i=0; i<[feedSource count]; i++) {
+        Feed *feed = [feedSource objectAtIndex:i];
+        [array addObject:feed];
+    }
+    feedSource = array;
 }
 
 -(void)changeButton {
@@ -362,7 +372,7 @@
     
     if ([MachineUtil isNetworkActivated]) {
         if (!articleView) {
-            if ([[MachineUtil machineName] isEqualToString:@"iPhone5,2"] || [[MachineUtil machineName] isEqualToString:@"iPhone6,2"]) {
+            if ([MachineUtil isHighSize]) {
                 articleView = [[self storyboard] instantiateViewControllerWithIdentifier:@"articleViewController"];
             } else {
                 articleView = [[self storyboard] instantiateViewControllerWithIdentifier:@"articleViewController"];

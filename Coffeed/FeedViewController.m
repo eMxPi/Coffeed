@@ -103,7 +103,7 @@
     
     // Charge vue profil par défaut
     if (!feedListViewController) {
-        if ([[MachineUtil machineName] isEqualToString:@"iPhone5,2"] || [[MachineUtil machineName] isEqualToString:@"iPhone6,2"]) {
+        if ([MachineUtil isHighSize]) {
             feedListViewController = [[self storyboard] instantiateViewControllerWithIdentifier:@"feedListViewController"];
         } else {
             feedListViewController = [[self storyboard] instantiateViewControllerWithIdentifier:@"feedListViewController"];
@@ -342,7 +342,7 @@
                     [feedListViewController.view setFrame:CGRectMake(0, -1500, feedListViewController.view.frame.size.width, feedListViewController.view.frame.size.height)];
                 }
                 if (!settingsViewController) {
-                    if ([[MachineUtil machineName] isEqualToString:@"iPhone5,2"] || [[MachineUtil machineName] isEqualToString:@"iPhone6,2"]) {
+                    if ([MachineUtil isHighSize]) {
                         settingsViewController = [[self storyboard] instantiateViewControllerWithIdentifier:@"settingsViewController"];
                     } else {
                         settingsViewController = [[self storyboard] instantiateViewControllerWithIdentifier:@"settingsViewController"];
@@ -366,7 +366,7 @@
             }
             if ([MachineUtil isNetworkActivated]) {
                 if (!feedListViewController) {
-                    if ([[MachineUtil machineName] isEqualToString:@"iPhone5,2"] || [[MachineUtil machineName] isEqualToString:@"iPhone6,2"]) {
+                    if ([MachineUtil isHighSize]) {
                         feedListViewController = [[self storyboard] instantiateViewControllerWithIdentifier:@"feedListViewController"];
                     } else {
                         feedListViewController = [[self storyboard] instantiateViewControllerWithIdentifier:@"feedListViewController"];

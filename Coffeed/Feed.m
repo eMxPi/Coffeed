@@ -9,6 +9,6 @@
 #import "Feed.h"
 
 @implementation Feed
-@synthesize titre, source, resume, content, date, url;
+@synthesize titre, source, resume, content, date, url, isDay;
 
 @end

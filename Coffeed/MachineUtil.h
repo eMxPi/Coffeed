@@ -15,6 +15,8 @@
 
 +(NSString*)machineName;
 
++(BOOL)isHighSize;
+
 +(BOOL)isNetworkActivated;
 
 +(BOOL)isNetworkEnabled;

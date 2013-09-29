@@ -236,7 +236,7 @@
 - (IBAction)signInPressed:(id)sender {
     if ([MachineUtil isNetworkActivated]) {
         if (!feedViewController) {
-            if ([[MachineUtil machineName] isEqualToString:@"iPhone5,2"] || [[MachineUtil machineName] isEqualToString:@"iPhone6,2"]) {
+            if ([MachineUtil isHighSize]) {
                 feedViewController = [[self storyboard] instantiateViewControllerWithIdentifier:@"feedViewController"];
             } else {
                 feedViewController = [[self storyboard] instantiateViewControllerWithIdentifier:@"feedViewController"];
