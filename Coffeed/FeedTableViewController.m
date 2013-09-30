@@ -43,9 +43,13 @@
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (tableView == feedTableView) {
-        Feed *feed = [feedSource objectAtIndex:indexPath.row];
-        if (feed.isDay) {
-            return 44;
+        if (feedSource && [feedSource count] > 0) {
+            Feed *feed = [feedSource objectAtIndex:indexPath.row];
+            if (feed.isDay) {
+                return 44;
+            } else {
+                return 70;
+            }
         } else {
             return 70;
         }
@@ -61,7 +65,11 @@
 // Customize the number of rows in the table view.
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if (tableView == feedTableView) {
-        return feedSource.count > 0 ? feedSource.count : 1;
+        if (feedSource) {
+            return feedSource.count > 0 ? feedSource.count : 1;
+        } else {
+            return 1;
+        }
     } else {
         return 0;
     }
@@ -162,14 +170,16 @@
      [articleView.view setFrame:CGRectMake(0, 0, articleView.view.frame.size.width, articleView.view.frame.size.height)];
      [UIView commitAnimations];
      }*/
-    
-    NSDictionary *userInfo = [NSDictionary dictionaryWithObject:[NSNumber numberWithInt:indexPath.row] forKey:@"feed"];
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"displayFeed" object:nil userInfo:userInfo];
+    Feed *feed = [feedSource objectAtIndex:indexPath.row];
+    if (!feed.isDay) {
+        NSDictionary *userInfo = [NSDictionary dictionaryWithObject:feed.id forKey:@"feed"];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"displayFeed" object:nil userInfo:userInfo];
+    }
 }
 
 
 #pragma mark ArticleViewController
--(void)retourArticlePressed {
+-(void)retourArticlePressed:(NSString *)id{
     if (articleView) {
         [UIView beginAnimations:nil context:nil];
         [UIView setAnimationDuration:1.0];

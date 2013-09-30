@@ -24,9 +24,10 @@
 #import "FeedTableViewController.h"
 #import "ResumeViewController.h"
 #import "EmptyViewController.h"
+#import "FeedlyUtils.h"
 
 @protocol FeedListViewControllerDelegate;
-@interface FeedListViewController : UIViewController <UIGestureRecognizerDelegate, ArticleViewControllerDelegate, UIScrollViewDelegate> {
+@interface FeedListViewController : UIViewController <UIGestureRecognizerDelegate, ArticleViewControllerDelegate, UIScrollViewDelegate, NSURLConnectionDelegate> {
     id<FeedListViewControllerDelegate>__unsafe_unretained delegate;
     IBOutlet UIButton *listButton;
     IBOutlet UIButton *imageButton;
@@ -36,6 +37,7 @@
     BOOL isDeployed;
     UIImage *imageBack;
     NSMutableArray *feedSource;
+    NSMutableArray *feedSourceParsed;
     NSMutableArray  *photoTitles;         // Titles of images
     NSMutableArray  *photoSmallImageData; // Image data (thumbnail)
     NSMutableArray  *photoURLsLargeImage; // URL to larger image
@@ -49,8 +51,8 @@
     FeedTableViewController *tableFeedView;
     ResumeViewController *resumeViewController;
     EmptyViewController *emptyView;
-    UIImage *imageBlurred;
-    UIImage *imageBlurredStrong;
+    NSMutableArray *imageBlurredArray;
+    NSMutableData *myData;
 }
 @property (nonatomic, unsafe_unretained) id<FeedListViewControllerDelegate>delegate;
 @property (strong, nonatomic) IBOutlet UILabel *dateLabel;

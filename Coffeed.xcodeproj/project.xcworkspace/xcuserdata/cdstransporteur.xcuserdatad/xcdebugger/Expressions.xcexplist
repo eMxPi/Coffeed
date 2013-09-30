@@ -3,6 +3,17 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "__48-[HomeViewController connection:didReceiveData:]_block_invoke_2:HomeViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.view.frame.size.width">
+            </PersistentString>
+            <PersistentString
+               value = "[[UIScreen mainScreen] bounds].size.width">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "-[FeedViewController tableView:numberOfRowsInSection:]:FeedViewController.m">
          <PersistentStrings>
             <PersistentString
@@ -14,10 +25,10 @@
          contextName = "-[HomeViewController retrievePosition]:HomeViewController.m">
          <PersistentStrings>
             <PersistentString
-               value = "CLLocationManager">
+               value = "[CLLocationManager locationServicesEnabled] != NO">
             </PersistentString>
             <PersistentString
-               value = "[CLLocationManager locationServicesEnabled] != NO">
+               value = "CLLocationManager">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

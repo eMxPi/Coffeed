@@ -29,11 +29,12 @@
 @property (nonatomic, retain) NSString *titleArticle;
 @property (nonatomic, retain) NSString *text;
 @property (nonatomic, retain) NSMutableArray *articleSource;
+@property (nonatomic, retain) NSString *id;
 - (IBAction)backPressed:(id)sender;
 
 @end
 
 @protocol ArticleViewControllerDelegate
--(void)retourArticlePressed;
+-(void)retourArticlePressed:(NSString *)id;
 @required
 @end

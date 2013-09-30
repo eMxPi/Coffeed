@@ -73,7 +73,7 @@
     
     // ADD item
     MenuItem *add = [[MenuItem alloc] init];
-    add.text = @"Add a Feedly Account";
+    add.text = @"Saved For Later";
     add.image = [UIImage imageNamed:@"menu_ic_add.png"];
     add.isAdd = TRUE;
     add.isProfil = FALSE;
@@ -188,22 +188,22 @@
 - (IBAction)menuPressed:(id)sender {
     if (!isMenuDisplayed) {
         [UIView beginAnimations:nil context:nil];
-        [UIView setAnimationDuration:1.0];
+        [UIView setAnimationDuration:0.5];
         [UIView setAnimationDelegate:self];
         //[UIView setAnimationWillStartSelector: @selector(hideResume)];
         //[UIView setAnimationDidStopSelector: @selector(blurImage)];
-        [rightView setFrame:CGRectMake(270, 112, rightView.frame.size.width, rightView.frame.size.height/2)];
+        [rightView setFrame:CGRectMake(240, 112, rightView.frame.size.width, rightView.frame.size.height-reduceSizeView)];
         [rightView setClipsToBounds:TRUE];
         [UIView commitAnimations];
         isMenuDisplayed = TRUE;
         
     } else {
         [UIView beginAnimations:nil context:nil];
-        [UIView setAnimationDuration:1.0];
+        [UIView setAnimationDuration:0.5];
         [UIView setAnimationDelegate:self];
         //[UIView setAnimationWillStartSelector: @selector(hideResume)];
         //[UIView setAnimationDidStopSelector: @selector(blurImage)];
-        [rightView setFrame:CGRectMake(0, 0, rightView.frame.size.width, rightView.frame.size.height*2)];
+        [rightView setFrame:CGRectMake(0, 0, rightView.frame.size.width, rightView.frame.size.height+reduceSizeView)];
         [UIView commitAnimations];
         isMenuDisplayed = FALSE;
     }
@@ -356,7 +356,7 @@
             [UIView beginAnimations:nil context:nil];
             [UIView setAnimationDuration:1.0];
             [UIView setAnimationDelegate:self];
-            [rightView setFrame:CGRectMake(0, 0, rightView.frame.size.width, rightView.frame.size.height*2)];
+            [rightView setFrame:CGRectMake(0, 0, rightView.frame.size.width, rightView.frame.size.height+reduceSizeView)];
             [UIView commitAnimations];
         } else if (item.isProfil) {
             if (settingsViewController) {
@@ -380,7 +380,7 @@
             [UIView beginAnimations:nil context:nil];
             [UIView setAnimationDuration:1.0];
             [UIView setAnimationDelegate:self];
-            [rightView setFrame:CGRectMake(0, 0, rightView.frame.size.width, rightView.frame.size.height*2)];
+            [rightView setFrame:CGRectMake(0, 0, rightView.frame.size.width, rightView.frame.size.height+reduceSizeView)];
             [UIView commitAnimations];
         } else if (item.isDisconnect) {
             if (settingsViewController) {

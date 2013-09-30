@@ -51,6 +51,17 @@
     return newImage;
 }
 
+- (UIImage *)extractImage:(UIImage *)image {
+    float x = (image.size.width - self.view.frame.size.width*2 ) /2;
+    float y = (image.size.height - self.view.frame.size.height*2 ) /2;
+    x = x > 0 ? x : 0;
+    y = y > 0 ? y : 0;
+    CGRect rect = CGRectMake(x,y,self.view.frame.size.width*2,self.view.frame.size.height*2);
+    CGImageRef imageRef = CGImageCreateWithImageInRect([image CGImage], rect);
+    
+    return [UIImage imageWithCGImage:imageRef];
+}
+
 -(void)retrievePosition {
     locationManager = [[CLLocationManager alloc] init];
     locationManager.delegate = self;
@@ -111,7 +122,7 @@
     // Loop through each entry in the dictionary...
 	for (NSDictionary *photo in photos)
     {
-        if ([[photo objectForKey:@"ispublic"] intValue] == 1) {
+        //if ([[photo objectForKey:@"ispublic"] intValue] == 1) {
             // Get title of the image
             NSString *title = [photo objectForKey:@"title"];
             
@@ -138,15 +149,15 @@
             [photoURLsLargeImage addObject:[NSURL URLWithString:photoURLString]];
             
             //NSLog(@"photoURLsLargeImage: %@\n\n", photoURLString);
-        }
+       // }
 	}
     
     if ([photoURLsLargeImage count] > 0) {
         
         dispatch_async(dispatch_get_global_queue(0,0), ^{
             int x = arc4random() % ([photoURLsLargeImage count]-1);
-            NSLog(@"Index %i:",(x-1));
-            NSURL *url = [photoURLsLargeImage objectAtIndex:(x-1)];
+            NSLog(@"Index %i:",x);
+            NSURL *url = [photoURLsLargeImage objectAtIndex:x];
             NSData *data = nil;
             if (url != nil) {
                 data = [[NSData alloc] initWithContentsOfURL:url];
@@ -155,10 +166,8 @@
                 if ( data == nil || [data length] == 9218) {
                     return;
                 } else {
-                    UIImage* newImage = [UIImage imageWithData:data];
-                    //newImage = [self imageWithImage:newImage scaledToSize:CGSizeMake(320, 568)];
-                    imageBack = newImage;
-                    [backgroundImage setImage:newImage];
+                    imageBack = [self extractImage:[UIImage imageWithData:data]];
+                    [backgroundImage setImage:imageBack];
                 }
             });
         });
@@ -199,7 +208,9 @@
  *------------------------------------------------------------*/
 -(void)searchFlickrPhotos
 {
-    NSString *urlString = [NSString stringWithFormat:@"http://api.flickr.com/services/rest/?method=flickr.galleries.getPhotos&api_key=%s&gallery_id=%s&per_page=25&format=json&nojsoncallback=1", FlickrAPIKey, cubaGallery];
+    //NSString *urlString = [NSString stringWithFormat:@"http://api.flickr.com/services/rest/?method=flickr.galleries.getPhotos&api_key=%s&gallery_id=%s&per_page=25&format=json&nojsoncallback=1", FlickrAPIKey, cubaGallery];
+    
+    NSString *urlString = [NSString stringWithFormat:@"http://api.flickr.com/services/rest/?method=flickr.groups.pools.getPhotos&api_key=%s&group_id=%s&per_page=25&format=json&nojsoncallback=1", FlickrAPIKey, yahooGroup];
     
     // Create NSURL string from formatted string
 	NSURL *url = [NSURL URLWithString:urlString];
@@ -256,5 +267,10 @@
         feedViewController = nil;
         [feedViewController.view setFrame:CGRectMake(0, -1500, feedViewController.view.frame.size.width, feedViewController.view.frame.size.height)];
     }
+}
+
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
 }
 @end
