@@ -2,7 +2,11 @@
 //  FeedlyUtils.m
 //  Coffeed
 //
+<<<<<<< HEAD
 //  Created by CDS Transporteur on 30/09/13.
+=======
+//  Created by Maxime Pontoire on 30/09/13.
+>>>>>>> ffeea90565904719e0cc4f0f70f9b9df4b16a7d0
 //  Copyright (c) 2013 Coffeed Inc. All rights reserved.
 //
 
@@ -10,9 +14,15 @@
 
 @implementation FeedlyUtils
 
+<<<<<<< HEAD
 +(NSString *)getCode {
     
     NSString *urlString = [NSString stringWithFormat:@"https://sandbox.feedly.com/v3/auth/auth?client_id=%@&redirect_uri=http://localhost&response_type=code&scope=https://cloud.feedly.com/subscriptions&provider=google",clientId];
+=======
++(NSString *)getToken {
+    
+    NSString *urlString = [NSString stringWithFormat:@"https://sandbox.feedly.com/v3/auth/auth?client_id=%s&redirect_uri=http://localhost&response_type=code&scope=https://cloud.feedly.com/subscriptions&provider=google",clientId];
+>>>>>>> ffeea90565904719e0cc4f0f70f9b9df4b16a7d0
     NSMutableURLRequest *requete = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:urlString]];
     [requete setHTTPMethod:@"GET"];
     [requete setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"content-type"];
@@ -30,6 +40,7 @@
     return stringXML;
 }
 
+<<<<<<< HEAD
 +(NSString *)getToken:(NSString *)token {
     /*NSString *code = nil;
     NSString *urlString = [NSString stringWithFormat:@"https://sandbox.feedly.com/v3/auth/token?code=%@&client_id=%@&client_secret=%@&redirect_uri=%@&state=%@&grant_type=%@",
@@ -89,6 +100,13 @@
 {
     
     NSString *urlString = [NSString stringWithFormat:@"https://sandbox.feedly.com/v3/auth/token?client_id=%@&code=%@&client_secret=%@&redirect_uri=http://localhost&grant_type=authorization_code&response_type=code&scope=https://cloud.feedly.com/subscriptions",clientId,token,clientSecret];
+=======
++(NSString *)refreshToken {
+    
+    [self getToken];
+    
+    NSString *urlString = [NSString stringWithFormat:@"https://sandbox.feedly.com/v3/auth/token?client_id=%s&code=%s&client_secret=%s&redirect_uri=http://localhost&grant_type=authorization_code&response_type=code&scope=https://cloud.feedly.com/subscriptions",clientId,code,clientSecret];
+>>>>>>> ffeea90565904719e0cc4f0f70f9b9df4b16a7d0
     NSMutableURLRequest *requete = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:urlString]];
     [requete setHTTPMethod:@"POST"];
     [requete setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"content-type"];
@@ -102,7 +120,11 @@
     NSLog(@"result = %@",result);
     
     NSString *stringXML = [[NSString alloc] initWithData:result encoding:NSUTF8StringEncoding];
+<<<<<<< HEAD
     NSLog(@"JSON = %@",stringXML);
+=======
+    NSLog(@"stringXML = %@",stringXML);
+>>>>>>> ffeea90565904719e0cc4f0f70f9b9df4b16a7d0
     return stringXML;
 }
 

@@ -2,7 +2,7 @@
 //  ArticleTextCell.m
 //  Coffeed
 //
-//  Created by CDS Transporteur on 27/09/13.
+//  Created by Maxime Pontoire on 27/09/13.
 //  Copyright (c) 2013 Coffeed Inc. All rights reserved.
 //
 

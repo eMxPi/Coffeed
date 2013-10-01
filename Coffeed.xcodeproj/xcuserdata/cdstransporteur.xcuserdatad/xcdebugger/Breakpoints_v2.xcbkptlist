@@ -9,6 +9,41 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
+<<<<<<< HEAD
+=======
+            filePath = "Coffeed/HomeViewController.m"
+            timestampString = "402237198.282837"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "229"
+            endingLineNumber = "229"
+            landmarkName = "-revealLogo"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Coffeed/HomeViewController.m"
+            timestampString = "401896626.207649"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "-viewWillAppear:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+>>>>>>> ffeea90565904719e0cc4f0f70f9b9df4b16a7d0
             filePath = "Coffeed/FeedViewController.m"
             timestampString = "401892700.614234"
             startingColumnNumber = "9223372036854775807"
@@ -73,6 +108,7 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
+<<<<<<< HEAD
             filePath = "Coffeed/ArticleViewController.m"
             timestampString = "401985851.842403"
             startingColumnNumber = "9223372036854775807"
@@ -80,6 +116,15 @@
             startingLineNumber = "205"
             endingLineNumber = "205"
             landmarkName = "-tableView:cellForRowAtIndexPath:"
+=======
+            filePath = "Coffeed/HomeViewController.m"
+            timestampString = "402237198.282837"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "123"
+            endingLineNumber = "123"
+            landmarkName = "-connection:didReceiveData:"
+>>>>>>> ffeea90565904719e0cc4f0f70f9b9df4b16a7d0
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -89,6 +134,7 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
+<<<<<<< HEAD
             filePath = "Coffeed/ArticleViewController.m"
             timestampString = "401985851.842403"
             startingColumnNumber = "9223372036854775807"
@@ -96,6 +142,15 @@
             startingLineNumber = "182"
             endingLineNumber = "182"
             landmarkName = "-tableView:viewForHeaderInSection:"
+=======
+            filePath = "Coffeed/HomeViewController.m"
+            timestampString = "402237198.282837"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "201"
+            endingLineNumber = "201"
+            landmarkName = "-searchFlickrPhotos:latitude:longitude:"
+>>>>>>> ffeea90565904719e0cc4f0f70f9b9df4b16a7d0
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -105,6 +160,7 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
+<<<<<<< HEAD
             filePath = "Coffeed/ArticleViewController.m"
             timestampString = "401985851.842403"
             startingColumnNumber = "9223372036854775807"
@@ -112,6 +168,15 @@
             startingLineNumber = "211"
             endingLineNumber = "211"
             landmarkName = "-scrollViewDidScroll:"
+=======
+            filePath = "Coffeed/HomeViewController.m"
+            timestampString = "402237198.282837"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "169"
+            endingLineNumber = "169"
+            landmarkName = "-connection:didReceiveData:"
+>>>>>>> ffeea90565904719e0cc4f0f70f9b9df4b16a7d0
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -121,6 +186,7 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
+<<<<<<< HEAD
             filePath = "Coffeed/ArticleViewController.m"
             timestampString = "401985851.842403"
             startingColumnNumber = "9223372036854775807"
@@ -128,6 +194,15 @@
             startingLineNumber = "213"
             endingLineNumber = "213"
             landmarkName = "-scrollViewDidScroll:"
+=======
+            filePath = "Coffeed/HomeViewController.m"
+            timestampString = "402237198.282837"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "155"
+            endingLineNumber = "155"
+            landmarkName = "-connection:didReceiveData:"
+>>>>>>> ffeea90565904719e0cc4f0f70f9b9df4b16a7d0
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -137,6 +212,7 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
+<<<<<<< HEAD
             filePath = "Coffeed/ArticleViewController.m"
             timestampString = "401985851.842403"
             startingColumnNumber = "9223372036854775807"
@@ -144,6 +220,15 @@
             startingLineNumber = "71"
             endingLineNumber = "71"
             landmarkName = "-viewWillAppear:"
+=======
+            filePath = "Coffeed/HomeViewController.m"
+            timestampString = "402237198.282837"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "125"
+            endingLineNumber = "125"
+            landmarkName = "-connection:didReceiveData:"
+>>>>>>> ffeea90565904719e0cc4f0f70f9b9df4b16a7d0
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -153,6 +238,7 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
+<<<<<<< HEAD
             filePath = "Coffeed/FeedListViewController.m"
             timestampString = "402248564.748199"
             startingColumnNumber = "9223372036854775807"
@@ -160,6 +246,15 @@
             startingLineNumber = "177"
             endingLineNumber = "177"
             landmarkName = "-formatFeedTable"
+=======
+            filePath = "Coffeed/HomeViewController.m"
+            timestampString = "402237198.282837"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "149"
+            endingLineNumber = "149"
+            landmarkName = "-connection:didReceiveData:"
+>>>>>>> ffeea90565904719e0cc4f0f70f9b9df4b16a7d0
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -201,6 +296,7 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
+<<<<<<< HEAD
             filePath = "Coffeed/FeedListViewController.m"
             timestampString = "402248564.748199"
             startingColumnNumber = "9223372036854775807"
@@ -254,6 +350,15 @@
             startingLineNumber = "179"
             endingLineNumber = "179"
             landmarkName = "-formatFeedTable"
+=======
+            filePath = "Coffeed/HomeViewController.m"
+            timestampString = "402237198.282837"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
+            landmarkName = "-retrievePosition"
+>>>>>>> ffeea90565904719e0cc4f0f70f9b9df4b16a7d0
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -263,6 +368,7 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
+<<<<<<< HEAD
             filePath = "Coffeed/FeedTableViewController.m"
             timestampString = "402224761.936902"
             startingColumnNumber = "9223372036854775807"
@@ -270,6 +376,15 @@
             startingLineNumber = "125"
             endingLineNumber = "125"
             landmarkName = "-tableView:cellForRowAtIndexPath:"
+=======
+            filePath = "Coffeed/HomeViewController.m"
+            timestampString = "402237198.282837"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "163"
+            endingLineNumber = "163"
+            landmarkName = "-connection:didReceiveData:"
+>>>>>>> ffeea90565904719e0cc4f0f70f9b9df4b16a7d0
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -295,6 +410,7 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
+<<<<<<< HEAD
             filePath = "Coffeed/FeedListViewController.m"
             timestampString = "402249606.477022"
             startingColumnNumber = "9223372036854775807"
@@ -302,6 +418,15 @@
             startingLineNumber = "224"
             endingLineNumber = "224"
             landmarkName = "-viewWillAppear:"
+=======
+            filePath = "Coffeed/HomeViewController.m"
+            timestampString = "402237198.282837"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "166"
+            endingLineNumber = "166"
+            landmarkName = "-connection:didReceiveData:"
+>>>>>>> ffeea90565904719e0cc4f0f70f9b9df4b16a7d0
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -412,6 +537,274 @@
             startingLineNumber = "49"
             endingLineNumber = "49"
             landmarkName = "-webView:shouldStartLoadWithRequest:navigationType:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Coffeed/FeedListViewController.m"
+            timestampString = "402248564.748199"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "177"
+            endingLineNumber = "177"
+            landmarkName = "-formatFeedTable"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Coffeed/FeedListViewController.m"
+            timestampString = "402249576.912484"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "362"
+            endingLineNumber = "362"
+            landmarkName = "@implementation FeedListViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Coffeed/FeedTableViewController.m"
+            timestampString = "402224761.936902"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "173"
+            endingLineNumber = "173"
+            landmarkName = "-tableView:didSelectRowAtIndexPath:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Coffeed/FeedListViewController.m"
+            timestampString = "402248564.748199"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "180"
+            endingLineNumber = "180"
+            landmarkName = "-formatFeedTable"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[FeedListViewController formatFeedTable]"
+                  moduleName = "Coffeed"
+                  urlString = "file://localhost/Volumes/KEY/Coffeed/Coffeed/Coffeed/FeedListViewController.m"
+                  timestampString = "402224476.695544"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "177"
+                  endingLineNumber = "177"
+                  offsetFromSymbolStart = "431">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[FeedListViewController formatFeedTable]"
+                  moduleName = "Coffeed"
+                  urlString = "file://localhost/Volumes/KEY/Coffeed/Coffeed/Coffeed/FeedListViewController.m"
+                  timestampString = "402224476.695934"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "177"
+                  endingLineNumber = "177"
+                  offsetFromSymbolStart = "1070">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Coffeed/HomeViewController.m"
+            timestampString = "402237198.282837"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "216"
+            endingLineNumber = "216"
+            landmarkName = "-searchFlickrPhotos"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Coffeed/FeedListViewController.m"
+            timestampString = "402248564.748199"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "179"
+            endingLineNumber = "179"
+            landmarkName = "-formatFeedTable"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Coffeed/FeedTableViewController.m"
+            timestampString = "402224761.936902"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "125"
+            endingLineNumber = "125"
+            landmarkName = "-tableView:cellForRowAtIndexPath:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Coffeed/HomeViewController.m"
+            timestampString = "402237198.282837"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "159"
+            endingLineNumber = "159"
+            landmarkName = "-connection:didReceiveData:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Coffeed/HomeViewController.m"
+            timestampString = "402237198.282837"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "150"
+            endingLineNumber = "150"
+            landmarkName = "-connection:didReceiveData:"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[HomeViewController connection:didReceiveData:]"
+                  moduleName = "Coffeed"
+                  urlString = "file://localhost/Volumes/KEY/Coffeed/Coffeed/Coffeed/HomeViewController.m"
+                  timestampString = "402236045.334936"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "142"
+                  endingLineNumber = "142"
+                  offsetFromSymbolStart = "1734">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[HomeViewController connection:didReceiveData:]"
+                  moduleName = "Coffeed"
+                  urlString = "file://localhost/Volumes/KEY/Coffeed/Coffeed/Coffeed/HomeViewController.m"
+                  timestampString = "402236045.335498"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "142"
+                  endingLineNumber = "142"
+                  offsetFromSymbolStart = "1914">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Coffeed/HomeViewController.m"
+            timestampString = "402237198.282837"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "161"
+            endingLineNumber = "161"
+            landmarkName = "-connection:didReceiveData:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Coffeed/FeedListViewController.m"
+            timestampString = "402249576.912484"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "379"
+            endingLineNumber = "379"
+            landmarkName = "-scrollViewDidScroll:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Coffeed/FeedlyUtils.m"
+            timestampString = "402249143.10603"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "+getToken"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Coffeed/FeedListViewController.m"
+            timestampString = "402249606.477022"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "224"
+            endingLineNumber = "224"
+            landmarkName = "-viewWillAppear:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

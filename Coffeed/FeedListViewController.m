@@ -95,7 +95,11 @@
     //Blurring images
     imageBlurredArray = [[NSMutableArray alloc] init];
     for (int i=0; i<20; i++) {
+<<<<<<< HEAD
         [imageBlurredArray addObject:[imageBack stackBlur:i*5]];
+=======
+        [imageBlurredArray addObject:[imageBack stackBlur:i]];
+>>>>>>> ffeea90565904719e0cc4f0f70f9b9df4b16a7d0
     }
 }
 
@@ -125,6 +129,7 @@
     [contentScrollView addSubview:resumeViewController.view];
     
     /*if (!dayView) {
+<<<<<<< HEAD
      if ([MachineUtil isHighSize]) {
      dayView = [[self storyboard] instantiateViewControllerWithIdentifier:@"dayViewController"];
      } else {
@@ -134,6 +139,17 @@
      [dayView.view setFrame:CGRectMake(0, 466, 320, 44)];
      [dayView.dayLabel setText:@"Today"];
      [contentScrollView addSubview:dayView.view];*/
+=======
+        if ([MachineUtil isHighSize]) {
+            dayView = [[self storyboard] instantiateViewControllerWithIdentifier:@"dayViewController"];
+        } else {
+            dayView = [[self storyboard] instantiateViewControllerWithIdentifier:@"dayViewController"];
+        }
+    }
+    [dayView.view setFrame:CGRectMake(0, 466, 320, 44)];
+    [dayView.dayLabel setText:@"Today"];
+    [contentScrollView addSubview:dayView.view];*/
+>>>>>>> ffeea90565904719e0cc4f0f70f9b9df4b16a7d0
     feedSourceParsed =[self formatFeedTable];
     if (!tableFeedView) {
         if ([MachineUtil isHighSize]) {
@@ -142,11 +158,19 @@
             tableFeedView = [[self storyboard] instantiateViewControllerWithIdentifier:@"feedTableViewController"];
         }
     }
+<<<<<<< HEAD
     [tableFeedView.view setFrame:CGRectMake(0, 471, 320, 523)];
     tableFeedView.feedSource = feedSourceParsed;
     [tableFeedView.feedTableView reloadData];
     [contentScrollView addSubview:tableFeedView.view];
     contentScrollView.contentSize = CGSizeMake(320, 994);
+=======
+    [tableFeedView.view setFrame:CGRectMake(0, 468, 320, 523)];
+    tableFeedView.feedSource = feedSourceParsed;
+    [tableFeedView.feedTableView reloadData];
+    [contentScrollView addSubview:tableFeedView.view];
+    contentScrollView.contentSize = CGSizeMake(320, 1001);
+>>>>>>> ffeea90565904719e0cc4f0f70f9b9df4b16a7d0
 }
 
 -(NSString *)formatDate:(NSString *)timestamp {

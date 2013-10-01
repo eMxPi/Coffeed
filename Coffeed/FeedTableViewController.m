@@ -46,9 +46,15 @@
         if (feedSource && [feedSource count] > 0) {
             Feed *feed = [feedSource objectAtIndex:indexPath.row];
             if (feed.isDay) {
+<<<<<<< HEAD
                 return 25;
             } else {
                 return 75;
+=======
+                return 44;
+            } else {
+                return 70;
+>>>>>>> ffeea90565904719e0cc4f0f70f9b9df4b16a7d0
             }
         } else {
             return 70;
@@ -177,6 +183,7 @@
         NSDictionary *userInfo = [NSDictionary dictionaryWithObject:feed.id forKey:@"feed"];
         [[NSNotificationCenter defaultCenter] postNotificationName:@"displayFeed" object:nil userInfo:userInfo];
     }
+<<<<<<< HEAD
 }
 
 
@@ -194,6 +201,8 @@
     [dateFormat setDateFormat:@"HH:mm"];
     dateOut = [dateFormat stringFromDate:now];
     return dateOut;
+=======
+>>>>>>> ffeea90565904719e0cc4f0f70f9b9df4b16a7d0
 }
 
 

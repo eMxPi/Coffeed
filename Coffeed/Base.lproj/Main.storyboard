@@ -213,8 +213,13 @@
                                             <action selector="listPressed:" destination="aSR-BC-QGZ" eventType="touchUpInside" id="ukZ-8t-03l"/>
                                         </connections>
                                     </button>
+<<<<<<< HEAD
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="navbar_logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="wlA-HL-diU">
                                         <rect key="frame" x="110" y="25" width="100" height="44"/>
+=======
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="home_logo_coffeed.png" translatesAutoresizingMaskIntoConstraints="NO" id="wlA-HL-diU">
+                                        <rect key="frame" x="95" y="30" width="130" height="34"/>
+>>>>>>> ffeea90565904719e0cc4f0f70f9b9df4b16a7d0
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XUX-LV-pfa">
@@ -227,7 +232,11 @@
                                             <action selector="menuPressed:" destination="aSR-BC-QGZ" eventType="touchUpInside" id="Nl9-eh-aub"/>
                                         </connections>
                                     </button>
+<<<<<<< HEAD
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3hE-OG-hhc">
+=======
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3hE-OG-hhc">
+>>>>>>> ffeea90565904719e0cc4f0f70f9b9df4b16a7d0
                                         <rect key="frame" x="0.0" y="72" width="320" height="496"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -324,6 +333,13 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+<<<<<<< HEAD
+=======
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="home_logo_coffeed.png" translatesAutoresizingMaskIntoConstraints="NO" id="Yoz-cD-Gpb">
+                                <rect key="frame" x="95" y="30" width="130" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+>>>>>>> ffeea90565904719e0cc4f0f70f9b9df4b16a7d0
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P94-aV-il1">
                                 <rect key="frame" x="0.0" y="34" width="45" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>

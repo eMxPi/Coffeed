@@ -74,9 +74,15 @@
     // ADD item
     MenuItem *add = [[MenuItem alloc] init];
     add.text = @"Saved For Later";
+<<<<<<< HEAD
     add.image = [UIImage imageNamed:@"menu_ic_saved_off.png"];
     add.isLater = TRUE;
     add.isHome = FALSE;
+=======
+    add.image = [UIImage imageNamed:@"menu_ic_add.png"];
+    add.isAdd = TRUE;
+    add.isProfil = FALSE;
+>>>>>>> ffeea90565904719e0cc4f0f70f9b9df4b16a7d0
     add.isDisconnect = FALSE;
     add.isSettings = FALSE;
     [menuSource addObject:add];

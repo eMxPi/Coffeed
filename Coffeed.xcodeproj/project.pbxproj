@@ -52,6 +52,7 @@
 		4EA86AD917F58E9C001ADE11 /* ArticleHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EA86AD817F58E9C001ADE11 /* ArticleHeaderCell.m */; };
 		4EA86ADF17F5B3AA001ADE11 /* ArticleContentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EA86ADE17F5B3AA001ADE11 /* ArticleContentCell.m */; };
 		4EA86AE117F5B3BC001ADE11 /* ArticleContentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EA86AE017F5B3BC001ADE11 /* ArticleContentCell.xib */; };
+<<<<<<< HEAD
 		4EAA8B2617FAFB0F00D7D61A /* menu_ic_home_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 4EAA8B1417FAFB0F00D7D61A /* menu_ic_home_off.png */; };
 		4EAA8B2717FAFB0F00D7D61A /* menu_ic_home_off@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4EAA8B1517FAFB0F00D7D61A /* menu_ic_home_off@2x.png */; };
 		4EAA8B2817FAFB0F00D7D61A /* menu_ic_home_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 4EAA8B1617FAFB0F00D7D61A /* menu_ic_home_on.png */; };
@@ -83,6 +84,10 @@
 		4ED799F417FAF68600CADE33 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ED799F317FAF68600CADE33 /* MobileCoreServices.framework */; };
 		4ED799F617FAF69300CADE33 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ED799F517FAF69300CADE33 /* CFNetwork.framework */; };
 		4ED799F917FAFA0B00CADE33 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4ED799F717FAFA0B00CADE33 /* Main.storyboard */; };
+=======
+		4ED799C917F9ADDF00CADE33 /* CustomUILabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ED799C817F9ADDF00CADE33 /* CustomUILabel.m */; };
+		4ED799CC17F9D16000CADE33 /* FeedlyUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ED799CB17F9D16000CADE33 /* FeedlyUtils.m */; };
+>>>>>>> ffeea90565904719e0cc4f0f70f9b9df4b16a7d0
 		65163F9C17EB65BB00B3D151 /* UIImage+StackBlur.m in Sources */ = {isa = PBXBuildFile; fileRef = 65163F9A17EB65BB00B3D151 /* UIImage+StackBlur.m */; };
 		65C81F7517F72E1D00359D28 /* EmptyTopCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 65C81F7417F72E1D00359D28 /* EmptyTopCell.m */; };
 		65C81F7817F72E2700359D28 /* ResumeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 65C81F7717F72E2700359D28 /* ResumeCell.m */; };
@@ -197,6 +202,7 @@
 		4EA86ADD17F5B3AA001ADE11 /* ArticleContentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleContentCell.h; sourceTree = "<group>"; };
 		4EA86ADE17F5B3AA001ADE11 /* ArticleContentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleContentCell.m; sourceTree = "<group>"; };
 		4EA86AE017F5B3BC001ADE11 /* ArticleContentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ArticleContentCell.xib; sourceTree = "<group>"; };
+<<<<<<< HEAD
 		4EAA8B1417FAFB0F00D7D61A /* menu_ic_home_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu_ic_home_off.png; sourceTree = "<group>"; };
 		4EAA8B1517FAFB0F00D7D61A /* menu_ic_home_off@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu_ic_home_off@2x.png"; sourceTree = "<group>"; };
 		4EAA8B1617FAFB0F00D7D61A /* menu_ic_home_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu_ic_home_on.png; sourceTree = "<group>"; };
@@ -215,10 +221,13 @@
 		4EAA8B2317FAFB0F00D7D61A /* menu_ic_settings_on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu_ic_settings_on@2x.png"; sourceTree = "<group>"; };
 		4EAA8B2417FAFB0F00D7D61A /* menu_sep_394x1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu_sep_394x1.png; sourceTree = "<group>"; };
 		4EAA8B2517FAFB0F00D7D61A /* menu_sep_394x1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu_sep_394x1@2x.png"; sourceTree = "<group>"; };
+=======
+>>>>>>> ffeea90565904719e0cc4f0f70f9b9df4b16a7d0
 		4ED799C717F9ADDF00CADE33 /* CustomUILabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomUILabel.h; sourceTree = "<group>"; };
 		4ED799C817F9ADDF00CADE33 /* CustomUILabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomUILabel.m; sourceTree = "<group>"; };
 		4ED799CA17F9D16000CADE33 /* FeedlyUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedlyUtils.h; sourceTree = "<group>"; };
 		4ED799CB17F9D16000CADE33 /* FeedlyUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedlyUtils.m; sourceTree = "<group>"; };
+<<<<<<< HEAD
 		4ED799CD17FAC68500CADE33 /* navbar_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navbar_logo.png; sourceTree = "<group>"; };
 		4ED799CE17FAC68500CADE33 /* navbar_logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navbar_logo@2x.png"; sourceTree = "<group>"; };
 		4ED799D117FAC69700CADE33 /* navbar_settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navbar_settings.png; sourceTree = "<group>"; };
@@ -230,6 +239,8 @@
 		4ED799F317FAF68600CADE33 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		4ED799F517FAF69300CADE33 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		4ED799F817FAFA0B00CADE33 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+=======
+>>>>>>> ffeea90565904719e0cc4f0f70f9b9df4b16a7d0
 		65163F9A17EB65BB00B3D151 /* UIImage+StackBlur.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+StackBlur.m"; sourceTree = "<group>"; };
 		65163F9B17EB65BB00B3D151 /* UIImage+StackBlur.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+StackBlur.h"; sourceTree = "<group>"; };
 		65C81F7317F72E1D00359D28 /* EmptyTopCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmptyTopCell.h; sourceTree = "<group>"; };

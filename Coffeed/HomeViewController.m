@@ -142,6 +142,7 @@ NSString * AccessTokenSavePath() {
 	for (NSDictionary *photo in photos)
     {
         //if ([[photo objectForKey:@"ispublic"] intValue] == 1) {
+<<<<<<< HEAD
         // Get title of the image
         NSString *title = [photo objectForKey:@"title"];
         
@@ -169,6 +170,35 @@ NSString * AccessTokenSavePath() {
         
         //NSLog(@"photoURLsLargeImage: %@\n\n", photoURLString);
         // }
+=======
+            // Get title of the image
+            NSString *title = [photo objectForKey:@"title"];
+            
+            // Save the title to the photo titles array
+            [photoTitles addObject:(title.length > 0 ? title : @"Untitled")];
+            
+            // Build the URL to where the image is stored (see the Flickr API)
+            // In the format http://farmX.static.flickr.com/server/id/secret
+            // Notice the "_s" which requests a "small" image 75 x 75 pixels
+            NSString *photoURLString = [NSString stringWithFormat:@"http://farm%@.static.flickr.com/%@/%@_%@_s.jpg", [photo objectForKey:@"farm"], [photo objectForKey:@"server"], [photo objectForKey:@"id"], [photo objectForKey:@"secret"]];
+            
+            //NSLog(@"photoURLString: %@", photoURLString);
+            
+            // The performance (scrolling) of the table will be much better if we
+            // build an array of the image data here, and then add this data as
+            // the cell.image value (see cellForRowAtIndexPath:)
+            //[photoSmallImageData addObject:[NSData dataWithContentsOfURL:[NSURL URLWithString:photoURLString]]];
+            
+            // Build and save the URL to the large image so we can zoom
+            // in on the image if requested
+            
+            photoURLString = [NSString stringWithFormat:@"http://farm%@.static.flickr.com/%@/%@_%@_b.jpg", [photo objectForKey:@"farm"], [photo objectForKey:@"server"], [photo objectForKey:@"id"], [photo objectForKey:@"secret"]];
+            
+            [photoURLsLargeImage addObject:[NSURL URLWithString:photoURLString]];
+            
+            //NSLog(@"photoURLsLargeImage: %@\n\n", photoURLString);
+       // }
+>>>>>>> ffeea90565904719e0cc4f0f70f9b9df4b16a7d0
 	}
     
     if ([photoURLsLargeImage count] > 0) {
@@ -187,7 +217,10 @@ NSString * AccessTokenSavePath() {
                 } else {
                     imageBack = [self extractImage:[UIImage imageWithData:data]];
                     [backgroundImage setImage:imageBack];
+<<<<<<< HEAD
                     [self revealFlickr];
+=======
+>>>>>>> ffeea90565904719e0cc4f0f70f9b9df4b16a7d0
                 }
             });
         });
@@ -235,7 +268,13 @@ NSString * AccessTokenSavePath() {
  *------------------------------------------------------------*/
 -(void)searchFlickrPhotos
 {
+<<<<<<< HEAD
     NSString *urlString = [NSString stringWithFormat:@"http://api.flickr.com/services/rest/?method=flickr.groups.pools.getPhotos&api_key=%@&group_id=%@&per_page=25&format=json&nojsoncallback=1", FlickrAPIKey, yahooGroup];
+=======
+    //NSString *urlString = [NSString stringWithFormat:@"http://api.flickr.com/services/rest/?method=flickr.galleries.getPhotos&api_key=%s&gallery_id=%s&per_page=25&format=json&nojsoncallback=1", FlickrAPIKey, cubaGallery];
+    
+    NSString *urlString = [NSString stringWithFormat:@"http://api.flickr.com/services/rest/?method=flickr.groups.pools.getPhotos&api_key=%s&group_id=%s&per_page=25&format=json&nojsoncallback=1", FlickrAPIKey, yahooGroup];
+>>>>>>> ffeea90565904719e0cc4f0f70f9b9df4b16a7d0
     
     // Create NSURL string from formatted string
 	NSURL *url = [NSURL URLWithString:urlString];
@@ -299,6 +338,7 @@ NSString * AccessTokenSavePath() {
 {
     return UIStatusBarStyleLightContent;
 }
+<<<<<<< HEAD
 
 /*
  - (void)didReceiveAccessToken:(NSNotification *)note;
@@ -385,4 +425,6 @@ NSString * AccessTokenSavePath() {
     }
 }
 
+=======
+>>>>>>> ffeea90565904719e0cc4f0f70f9b9df4b16a7d0
 @end
