@@ -21,7 +21,7 @@
 #import "FeedListViewController.h"
 
 @protocol FeedViewControllerDelegate;
-@interface FeedViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UIGestureRecognizerDelegate, SettingsViewControllerDelegate, FeedListViewControllerDelegate>
+@interface FeedViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UIGestureRecognizerDelegate, SettingsViewControllerDelegate, FeedListViewControllerDelegate, UIAlertViewDelegate>
 {
     id<FeedViewControllerDelegate>__unsafe_unretained delegate;
     IBOutlet UIImageView *backgroundImage;

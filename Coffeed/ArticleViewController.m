@@ -13,7 +13,7 @@
 @end
 
 @implementation ArticleViewController
-@synthesize delegate, titleArticle, text, articleSource;
+@synthesize delegate, titleArticle, text, articleSource, id;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -74,11 +74,11 @@
 }
 
 -(void)retourSwipe {
-    [delegate retourArticlePressed];
+    [delegate retourArticlePressed:id];
 }
 
 - (IBAction)backPressed:(id)sender {
-    [delegate retourArticlePressed];
+    [delegate retourArticlePressed:id];
 }
 
 -(void)revealBar {

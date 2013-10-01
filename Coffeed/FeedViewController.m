@@ -62,21 +62,21 @@
     menuSource = [[NSMutableArray alloc] init];
     
     // Fake Profil item
-    MenuItem *profil = [[MenuItem alloc] init];
-    profil.text = @"Maxime Pontoire";
-    profil.image = [UIImage imageNamed:@"profil.png"];
-    profil.isAdd = FALSE;
-    profil.isProfil = TRUE;
-    profil.isDisconnect = FALSE;
-    profil.isSettings = FALSE;
-    [menuSource addObject:profil];
+    MenuItem *home = [[MenuItem alloc] init];
+    home.text = @"Home";
+    home.image = [UIImage imageNamed:@"menu_ic_home_on.png"];
+    home.isLater = FALSE;
+    home.isHome = TRUE;
+    home.isDisconnect = FALSE;
+    home.isSettings = FALSE;
+    [menuSource addObject:home];
     
     // ADD item
     MenuItem *add = [[MenuItem alloc] init];
-    add.text = @"Add a Feedly Account";
-    add.image = [UIImage imageNamed:@"menu_ic_add.png"];
-    add.isAdd = TRUE;
-    add.isProfil = FALSE;
+    add.text = @"Saved For Later";
+    add.image = [UIImage imageNamed:@"menu_ic_saved_off.png"];
+    add.isLater = TRUE;
+    add.isHome = FALSE;
     add.isDisconnect = FALSE;
     add.isSettings = FALSE;
     [menuSource addObject:add];
@@ -84,18 +84,18 @@
     // Settings item
     MenuItem *settings = [[MenuItem alloc] init];
     settings.text = @"Settings";
-    settings.image = [UIImage imageNamed:@"menu_ic_settings.png"];
-    settings.isAdd = FALSE;
-    settings.isProfil = FALSE;
+    settings.image = [UIImage imageNamed:@"menu_ic_settings_off.png"];
+    settings.isLater = FALSE;
+    settings.isHome = FALSE;
     settings.isDisconnect = FALSE;
     settings.isSettings = TRUE;
     [menuSource addObject:settings];
     // Disconnect item
     MenuItem *disconnect = [[MenuItem alloc] init];
     disconnect.text = @"Logout";
-    disconnect.image = [UIImage imageNamed:@"menu_ic_logout.png"];
-    disconnect.isAdd = FALSE;
-    disconnect.isProfil = FALSE;
+    disconnect.image = [UIImage imageNamed:@"menu_ic_logout_off.png"];
+    disconnect.isLater = FALSE;
+    disconnect.isHome = FALSE;
     disconnect.isDisconnect = TRUE;
     disconnect.isSettings = FALSE;
     [menuSource addObject:disconnect];
@@ -188,22 +188,22 @@
 - (IBAction)menuPressed:(id)sender {
     if (!isMenuDisplayed) {
         [UIView beginAnimations:nil context:nil];
-        [UIView setAnimationDuration:1.0];
+        [UIView setAnimationDuration:0.5];
         [UIView setAnimationDelegate:self];
         //[UIView setAnimationWillStartSelector: @selector(hideResume)];
         //[UIView setAnimationDidStopSelector: @selector(blurImage)];
-        [rightView setFrame:CGRectMake(270, 112, rightView.frame.size.width, rightView.frame.size.height/2)];
+        [rightView setFrame:CGRectMake(240, 112, rightView.frame.size.width, rightView.frame.size.height-reduceSizeView)];
         [rightView setClipsToBounds:TRUE];
         [UIView commitAnimations];
         isMenuDisplayed = TRUE;
         
     } else {
         [UIView beginAnimations:nil context:nil];
-        [UIView setAnimationDuration:1.0];
+        [UIView setAnimationDuration:0.5];
         [UIView setAnimationDelegate:self];
         //[UIView setAnimationWillStartSelector: @selector(hideResume)];
         //[UIView setAnimationDidStopSelector: @selector(blurImage)];
-        [rightView setFrame:CGRectMake(0, 0, rightView.frame.size.width, rightView.frame.size.height*2)];
+        [rightView setFrame:CGRectMake(0, 0, rightView.frame.size.width, rightView.frame.size.height+reduceSizeView)];
         [UIView commitAnimations];
         isMenuDisplayed = FALSE;
     }
@@ -314,12 +314,7 @@
         cellMenu.name.adjustsFontSizeToFitWidth = YES;
         MenuItem *item = [menuSource objectAtIndex:indexPath.row];
         [cellMenu.name setText:item.text];
-        if (item.isProfil) {
-            UIImageView *view = [self circleImage:item.image];
-            [cellMenu.imageProfil addSubview:view];
-        } else {
-            [cellMenu.imageProfil setImage:item.image];
-        }
+        [cellMenu.imageProfil setImage:item.image];
         return cellMenu;
     } else {
         
@@ -334,6 +329,7 @@
     if (tableView == menuTableView) {
         isMenuDisplayed = FALSE;
         MenuItem *item = [menuSource objectAtIndex:indexPath.row];
+        
         if (item.isSettings) {
             if ([MachineUtil isNetworkActivated]) {
                 if (feedListViewController) {
@@ -356,9 +352,9 @@
             [UIView beginAnimations:nil context:nil];
             [UIView setAnimationDuration:1.0];
             [UIView setAnimationDelegate:self];
-            [rightView setFrame:CGRectMake(0, 0, rightView.frame.size.width, rightView.frame.size.height*2)];
+            [rightView setFrame:CGRectMake(0, 0, rightView.frame.size.width, rightView.frame.size.height+reduceSizeView)];
             [UIView commitAnimations];
-        } else if (item.isProfil) {
+        } else if (item.isHome) {
             if (settingsViewController) {
                 [settingsViewController.view removeFromSuperview];
                 settingsViewController = nil;
@@ -380,21 +376,66 @@
             [UIView beginAnimations:nil context:nil];
             [UIView setAnimationDuration:1.0];
             [UIView setAnimationDelegate:self];
-            [rightView setFrame:CGRectMake(0, 0, rightView.frame.size.width, rightView.frame.size.height*2)];
+            [rightView setFrame:CGRectMake(0, 0, rightView.frame.size.width, rightView.frame.size.height+reduceSizeView)];
             [UIView commitAnimations];
         } else if (item.isDisconnect) {
-            if (settingsViewController) {
-                [settingsViewController.view removeFromSuperview];
-                settingsViewController = nil;
-                [settingsViewController.view setFrame:CGRectMake(0, -1500, settingsViewController.view.frame.size.width, settingsViewController.view.frame.size.height)];
-            }
-            if (feedListViewController) {
-                [feedListViewController.view removeFromSuperview];
-                feedListViewController = nil;
-                [feedListViewController.view setFrame:CGRectMake(0, -1500, feedListViewController.view.frame.size.width, feedListViewController.view.frame.size.height)];
-            }
-            [delegate fermerPressed];
+            
+            
+            UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Disconnect ?"
+                                                              message:@"Do you really want to disconnect ?"
+                                                             delegate:self
+                                                    cancelButtonTitle:@"Cancel"
+                                                    otherButtonTitles:@"OK", nil];
+            [message show];
         }
+        [self changeImageMenu:indexPath.row];
+        [menuTableView reloadData];
+    }
+}
+
+-(void)changeImageMenu:(int)index {
+    for (int i=0; i<[menuSource count]; i++) {
+        MenuItem *current = [menuSource objectAtIndex:i];
+        if (current.isHome) {
+            current.image = [UIImage imageNamed:@"menu_ic_home_off.png"];
+            if (index == i) {
+                current.image = [UIImage imageNamed:@"menu_ic_home_on.png"];
+            }
+        } else if (current.isLater) {
+            current.image = [UIImage imageNamed:@"menu_ic_saved_off.png"];
+            if (index == i) {
+                current.image = [UIImage imageNamed:@"menu_ic_saved_on.png"];
+            }
+        } else if (current.isSettings) {
+            current.image = [UIImage imageNamed:@"menu_ic_settings_off.png"];
+            if (index == i) {
+                current.image = [UIImage imageNamed:@"menu_ic_settings_on.png"];
+            }
+        } else if (current.isDisconnect) {
+            current.image = [UIImage imageNamed:@"menu_ic_logout_off.png"];
+            if (index == i) {
+                current.image = [UIImage imageNamed:@"menu_ic_logout_on.png"];
+            }
+        }
+        [menuSource replaceObjectAtIndex:i withObject:current];
+    }
+}
+
+
+#pragma mark - UIAlertViewDelegate methods
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if (buttonIndex == 1) {
+        if (settingsViewController) {
+            [settingsViewController.view removeFromSuperview];
+            settingsViewController = nil;
+            [settingsViewController.view setFrame:CGRectMake(0, -1500, settingsViewController.view.frame.size.width, settingsViewController.view.frame.size.height)];
+        }
+        if (feedListViewController) {
+            [feedListViewController.view removeFromSuperview];
+            feedListViewController = nil;
+            [feedListViewController.view setFrame:CGRectMake(0, -1500, feedListViewController.view.frame.size.width, feedListViewController.view.frame.size.height)];
+        }
+        [delegate fermerPressed];
     }
 }
 

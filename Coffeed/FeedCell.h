@@ -12,10 +12,12 @@
     IBOutlet UILabel *source;
     IBOutlet UILabel *titre;
     IBOutlet UILabel *resume;
+    IBOutlet UILabel *date;
     
 }
 @property (nonatomic, retain) IBOutlet UILabel *source;
 @property (nonatomic, retain) IBOutlet UILabel *titre;
 @property (nonatomic, retain) IBOutlet UILabel *resume;
+@property (nonatomic, retain) IBOutlet UILabel *date;
 
 @end
