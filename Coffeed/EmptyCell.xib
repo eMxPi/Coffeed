@@ -7,11 +7,25 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> b1a0f7a4f2baefd2e7caf3a522427a2dc0487442
         <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="75" id="iik-27-fm2" customClass="EmptyCell">
             <rect key="frame" x="0.0" y="0.0" width="320" height="75"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iik-27-fm2" id="0Hm-ec-Khr">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="74"/>
+<<<<<<< HEAD
+=======
+=======
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="70" id="iik-27-fm2" customClass="EmptyCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iik-27-fm2" id="0Hm-ec-Khr">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="69"/>
+>>>>>>> ffeea90565904719e0cc4f0f70f9b9df4b16a7d0
+>>>>>>> b1a0f7a4f2baefd2e7caf3a522427a2dc0487442
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background_cellule.png" translatesAutoresizingMaskIntoConstraints="NO" id="mtE-fq-U73">
@@ -19,7 +33,15 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </imageView>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Message" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3OH-5R-hqS">
+<<<<<<< HEAD
                         <rect key="frame" x="20" y="27" width="280" height="21"/>
+=======
+<<<<<<< HEAD
+                        <rect key="frame" x="20" y="27" width="280" height="21"/>
+=======
+                        <rect key="frame" x="20" y="24" width="280" height="21"/>
+>>>>>>> ffeea90565904719e0cc4f0f70f9b9df4b16a7d0
+>>>>>>> b1a0f7a4f2baefd2e7caf3a522427a2dc0487442
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

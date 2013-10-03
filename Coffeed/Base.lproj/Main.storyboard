@@ -193,7 +193,11 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ph9-bI-oSU">
+<<<<<<< HEAD
                                         <rect key="frame" x="277" y="25" width="32" height="28"/>
+=======
+                                        <rect key="frame" x="277" y="33" width="32" height="28"/>
+>>>>>>> b1a0f7a4f2baefd2e7caf3a522427a2dc0487442
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="navbar_image_off.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -204,7 +208,11 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a4s-bh-Kas">
+<<<<<<< HEAD
                                         <rect key="frame" x="249" y="25" width="32" height="28"/>
+=======
+                                        <rect key="frame" x="249" y="33" width="32" height="28"/>
+>>>>>>> b1a0f7a4f2baefd2e7caf3a522427a2dc0487442
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="navbar_liste_off.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -214,12 +222,26 @@
                                             <action selector="listPressed:" destination="aSR-BC-QGZ" eventType="touchUpInside" id="ukZ-8t-03l"/>
                                         </connections>
                                     </button>
+<<<<<<< HEAD
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="navbar_logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="wlA-HL-diU">
                                         <rect key="frame" x="110" y="17" width="100" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XUX-LV-pfa">
                                         <rect key="frame" x="0.0" y="26" width="45" height="25"/>
+=======
+<<<<<<< HEAD
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="navbar_logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="wlA-HL-diU">
+                                        <rect key="frame" x="110" y="25" width="100" height="44"/>
+=======
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="home_logo_coffeed.png" translatesAutoresizingMaskIntoConstraints="NO" id="wlA-HL-diU">
+                                        <rect key="frame" x="95" y="30" width="130" height="34"/>
+>>>>>>> ffeea90565904719e0cc4f0f70f9b9df4b16a7d0
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XUX-LV-pfa">
+                                        <rect key="frame" x="0.0" y="34" width="45" height="25"/>
+>>>>>>> b1a0f7a4f2baefd2e7caf3a522427a2dc0487442
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="navbar_settings.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -228,8 +250,17 @@
                                             <action selector="menuPressed:" destination="aSR-BC-QGZ" eventType="touchUpInside" id="Nl9-eh-aub"/>
                                         </connections>
                                     </button>
+<<<<<<< HEAD
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3hE-OG-hhc">
                                         <rect key="frame" x="0.0" y="59" width="320" height="509"/>
+=======
+<<<<<<< HEAD
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3hE-OG-hhc">
+=======
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3hE-OG-hhc">
+>>>>>>> ffeea90565904719e0cc4f0f70f9b9df4b16a7d0
+                                        <rect key="frame" x="0.0" y="72" width="320" height="496"/>
+>>>>>>> b1a0f7a4f2baefd2e7caf3a522427a2dc0487442
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <connections>
@@ -330,8 +361,20 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+<<<<<<< HEAD
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P94-aV-il1">
                                 <rect key="frame" x="0.0" y="26" width="45" height="25"/>
+=======
+<<<<<<< HEAD
+=======
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="home_logo_coffeed.png" translatesAutoresizingMaskIntoConstraints="NO" id="Yoz-cD-Gpb">
+                                <rect key="frame" x="95" y="30" width="130" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+>>>>>>> ffeea90565904719e0cc4f0f70f9b9df4b16a7d0
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P94-aV-il1">
+                                <rect key="frame" x="0.0" y="34" width="45" height="25"/>
+>>>>>>> b1a0f7a4f2baefd2e7caf3a522427a2dc0487442
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="navbar_settings.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -341,7 +384,11 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="navbar_logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="owi-nk-OEE">
+<<<<<<< HEAD
                                 <rect key="frame" x="110" y="17" width="100" height="44"/>
+=======
+                                <rect key="frame" x="110" y="25" width="100" height="44"/>
+>>>>>>> b1a0f7a4f2baefd2e7caf3a522427a2dc0487442
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -365,7 +412,11 @@
                         <viewControllerLayoutGuide type="bottom" id="0X5-MQ-uB5"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="GFt-6T-ZG7">
+<<<<<<< HEAD
                         <rect key="frame" x="0.0" y="0.0" width="320" height="165"/>
+=======
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="151"/>
+>>>>>>> b1a0f7a4f2baefd2e7caf3a522427a2dc0487442
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="07W-q9-kiZ">

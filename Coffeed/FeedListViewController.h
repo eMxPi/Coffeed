@@ -25,7 +25,10 @@
 #import "ResumeViewController.h"
 #import "EmptyViewController.h"
 #import "FeedlyUtils.h"
+<<<<<<< HEAD
 #import "PersistanceManager.h"
+=======
+>>>>>>> b1a0f7a4f2baefd2e7caf3a522427a2dc0487442
 
 @protocol FeedListViewControllerDelegate;
 @interface FeedListViewController : UIViewController <UIGestureRecognizerDelegate, ArticleViewControllerDelegate, UIScrollViewDelegate, NSURLConnectionDelegate> {

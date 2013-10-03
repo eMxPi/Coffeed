@@ -74,9 +74,21 @@
     // ADD item
     MenuItem *add = [[MenuItem alloc] init];
     add.text = @"Saved For Later";
+<<<<<<< HEAD
     add.image = [UIImage imageNamed:@"menu_ic_saved_off.png"];
     add.isLater = TRUE;
     add.isHome = FALSE;
+=======
+<<<<<<< HEAD
+    add.image = [UIImage imageNamed:@"menu_ic_saved_off.png"];
+    add.isLater = TRUE;
+    add.isHome = FALSE;
+=======
+    add.image = [UIImage imageNamed:@"menu_ic_add.png"];
+    add.isAdd = TRUE;
+    add.isProfil = FALSE;
+>>>>>>> ffeea90565904719e0cc4f0f70f9b9df4b16a7d0
+>>>>>>> b1a0f7a4f2baefd2e7caf3a522427a2dc0487442
     add.isDisconnect = FALSE;
     add.isSettings = FALSE;
     add.isSubscribe = FALSE;
@@ -422,6 +434,7 @@
             current.image = [UIImage imageNamed:@"menu_ic_saved_off.png"];
             if (index == i) {
                 current.image = [UIImage imageNamed:@"menu_ic_saved_on.png"];
+<<<<<<< HEAD
             }
         } else if (current.isSettings) {
             current.image = [UIImage imageNamed:@"menu_ic_settings_off.png"];
@@ -457,6 +470,38 @@
             feedListViewController = nil;
             [feedListViewController.view setFrame:CGRectMake(0, -1500, feedListViewController.view.frame.size.width, feedListViewController.view.frame.size.height)];
         }
+=======
+            }
+        } else if (current.isSettings) {
+            current.image = [UIImage imageNamed:@"menu_ic_settings_off.png"];
+            if (index == i) {
+                current.image = [UIImage imageNamed:@"menu_ic_settings_on.png"];
+            }
+        } else if (current.isDisconnect) {
+            current.image = [UIImage imageNamed:@"menu_ic_logout_off.png"];
+            if (index == i) {
+                current.image = [UIImage imageNamed:@"menu_ic_logout_on.png"];
+            }
+        }
+        [menuSource replaceObjectAtIndex:i withObject:current];
+    }
+}
+
+
+#pragma mark - UIAlertViewDelegate methods
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if (buttonIndex == 1) {
+        if (settingsViewController) {
+            [settingsViewController.view removeFromSuperview];
+            settingsViewController = nil;
+            [settingsViewController.view setFrame:CGRectMake(0, -1500, settingsViewController.view.frame.size.width, settingsViewController.view.frame.size.height)];
+        }
+        if (feedListViewController) {
+            [feedListViewController.view removeFromSuperview];
+            feedListViewController = nil;
+            [feedListViewController.view setFrame:CGRectMake(0, -1500, feedListViewController.view.frame.size.width, feedListViewController.view.frame.size.height)];
+        }
+>>>>>>> b1a0f7a4f2baefd2e7caf3a522427a2dc0487442
         [delegate fermerPressed];
     }
 }

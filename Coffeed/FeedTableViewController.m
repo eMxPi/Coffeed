@@ -50,6 +50,7 @@
         if (feedSource && [feedSource count] > 0) {
             Feed *feed = [feedSource objectAtIndex:indexPath.row];
             if (feed.isDay) {
+<<<<<<< HEAD
                 return 25;
             } else {
                 if ([feed.titre length] <= 31) {
@@ -59,6 +60,17 @@
                 } else {
                     return 102;
                 }
+=======
+<<<<<<< HEAD
+                return 25;
+            } else {
+                return 75;
+=======
+                return 44;
+            } else {
+                return 70;
+>>>>>>> ffeea90565904719e0cc4f0f70f9b9df4b16a7d0
+>>>>>>> b1a0f7a4f2baefd2e7caf3a522427a2dc0487442
             }
         } else {
             return 70;
@@ -169,6 +181,7 @@
             cellDay.dayLabel.adjustsFontSizeToFitWidth = YES;
             return  cellDay;
         } else {
+<<<<<<< HEAD
             if ([feed.titre length] <= 31) {
                 [cell.titre setText:feed.titre];
                 [cell.resume setText:feed.resume];
@@ -188,6 +201,17 @@
                 [cellThree.date setText:[self formatDate:feed.date]];
                 return cellThree;
             }
+=======
+            cell.titre.adjustsFontSizeToFitWidth = YES;
+            cell.resume.adjustsFontSizeToFitWidth = YES;
+            cell.source.adjustsFontSizeToFitWidth = YES;
+            cell.date.adjustsFontSizeToFitWidth = YES;
+            [cell.titre setText:feed.titre];
+            [cell.resume setText:feed.resume];
+            [cell.source setText:feed.source];
+            [cell.date setText:[self formatDate:feed.date]];
+            return cell;
+>>>>>>> b1a0f7a4f2baefd2e7caf3a522427a2dc0487442
         }
     } else {
         cellEmpty.message.adjustsFontSizeToFitWidth = YES;
@@ -227,6 +251,10 @@
         NSDictionary *userInfo = [NSDictionary dictionaryWithObject:feed.id forKey:@"feed"];
         [[NSNotificationCenter defaultCenter] postNotificationName:@"displayFeed" object:nil userInfo:userInfo];
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> b1a0f7a4f2baefd2e7caf3a522427a2dc0487442
 }
 
 
@@ -244,6 +272,11 @@
     [dateFormat setDateFormat:@"HH:mm"];
     dateOut = [dateFormat stringFromDate:now];
     return dateOut;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> ffeea90565904719e0cc4f0f70f9b9df4b16a7d0
+>>>>>>> b1a0f7a4f2baefd2e7caf3a522427a2dc0487442
 }
 
 

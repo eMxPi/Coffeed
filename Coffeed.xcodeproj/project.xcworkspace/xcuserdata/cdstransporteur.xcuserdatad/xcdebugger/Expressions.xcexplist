@@ -3,7 +3,22 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+<<<<<<< HEAD
          contextName = "-[HomeViewController retrievePosition]:HomeViewController.m">
+=======
+         contextName = "__48-[HomeViewController connection:didReceiveData:]_block_invoke_2:HomeViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.view.frame.size.width">
+            </PersistentString>
+            <PersistentString
+               value = "[[UIScreen mainScreen] bounds].size.width">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[FeedViewController tableView:numberOfRowsInSection:]:FeedViewController.m">
+>>>>>>> b1a0f7a4f2baefd2e7caf3a522427a2dc0487442
          <PersistentStrings>
             <PersistentString
                value = "[CLLocationManager locationServicesEnabled] != NO">
@@ -17,7 +32,11 @@
          contextName = "-[FeedListViewController viewWillAppear:]:FeedListViewController.m">
          <PersistentStrings>
             <PersistentString
+<<<<<<< HEAD
                value = "[[PersistanceManager sharedPersistanceManager] getValueKey:nameTokenKey]">
+=======
+               value = "[CLLocationManager locationServicesEnabled] != NO">
+>>>>>>> b1a0f7a4f2baefd2e7caf3a522427a2dc0487442
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -28,6 +47,7 @@
          contextName = "+[FeedlyUtils getAbonnements]:FeedlyUtils.m">
          <PersistentStrings>
             <PersistentString
+<<<<<<< HEAD
                value = "[[PersistanceManager sharedPersistanceManager] getValueKey:accessTokenKey]">
             </PersistentString>
          </PersistentStrings>
@@ -51,6 +71,9 @@
          <PersistentStrings>
             <PersistentString
                value = "menuSource.count &gt; 0 ? menuSource.count : 1">
+=======
+               value = "CLLocationManager">
+>>>>>>> b1a0f7a4f2baefd2e7caf3a522427a2dc0487442
             </PersistentString>
          </PersistentStrings>
       </ContextState>
