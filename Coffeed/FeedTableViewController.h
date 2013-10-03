@@ -10,6 +10,8 @@
 #import "ArticleViewController.h"
 #import "EmptyCell.h"
 #import "FeedCell.h"
+#import "FeedTwoCell.h"
+#import "FeedThreeCell.h"
 #import "Feed.h"
 #import "MachineUtil.h"
 #import "DayCell.h"

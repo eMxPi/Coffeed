@@ -1,0 +1,27 @@
+
+/* Class = "IBUILabel"; text = "Your"; ObjectID = "07W-q9-kiZ"; */
+"07W-q9-kiZ.text" = "Your";
+
+/* Class = "IBUILabel"; text = "AUJOURD'HUI"; ObjectID = "A6A-D1-3yp"; */
+"A6A-D1-3yp.text" = "AUJOURD'HUI";
+
+/* Class = "IBUILabel"; text = "And you have "; ObjectID = "CzT-0y-tnb"; */
+"CzT-0y-tnb.text" = "And you have ";
+
+/* Class = "IBUILabel"; text = "Coffeed"; ObjectID = "OoT-C8-n4P"; */
+"OoT-C8-n4P.text" = "Coffeed";
+
+/* Class = "IBUILabel"; text = "is ready"; ObjectID = "PjF-xU-YUG"; */
+"PjF-xU-YUG.text" = "is ready";
+
+/* Class = "IBUIButton"; normalTitle = "Back"; ObjectID = "SDu-VM-ueQ"; */
+"SDu-VM-ueQ.normalTitle" = "Back";
+
+/* Class = "IBUILabel"; text = "Hello Maxime,"; ObjectID = "SJh-jp-wWg"; */
+"SJh-jp-wWg.text" = "Hello Maxime,";
+
+/* Class = "IBUIViewController"; title = "feedViewController"; ObjectID = "XDA-5v-McU"; */
+"XDA-5v-McU.title" = "feedViewController";
+
+/* Class = "IBUILabel"; text = "3 new items."; ObjectID = "bCN-dH-BON"; */
+"bCN-dH-BON.text" = "3 new items.";

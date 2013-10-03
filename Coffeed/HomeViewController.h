@@ -10,22 +10,32 @@
 #import "FeedViewController.h"
 #import "MachineUtil.h"
 #import "Constantes.h"
+#import "ConnexionViewController.h"
+#import "SBJSON.h"
+#import "Authentification.h"
+#import "PersistanceManager.h"
+#import "Abonnement.h"
 
-@interface HomeViewController : UIViewController <UIGestureRecognizerDelegate, FeedViewControllerDelegate, CLLocationManagerDelegate> {
+@interface HomeViewController : UIViewController <UIGestureRecognizerDelegate, FeedViewControllerDelegate, CLLocationManagerDelegate, ConnexionControllerDelegate> {
     
     IBOutlet UIImageView *backgroundImage;
     IBOutlet UIImageView *coffeedImage;
     IBOutlet UIView *coffeedImageView;
+    IBOutlet UIButton *signInButton;
     UIImage *imageBack;
     FeedViewController *feedViewController;
     CLLocationManager *locationManager;
     NSMutableArray  *photoTitles;         // Titles of images
     NSMutableArray  *photoSmallImageData; // Image data (thumbnail)
     NSMutableArray  *photoURLsLargeImage; // URL to larger image
+    ConnexionViewController *connexionView;
+    NSMutableArray *subscriptionsSource;
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data;
 - (void)searchFlickrPhotos:(NSString *)text latitude:(float) lat longitude:(float)lng;
 - (IBAction)signInPressed:(id)sender;
+
+@property (nonatomic, retain) NSString *accessToken;
 
 @end

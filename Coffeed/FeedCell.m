@@ -9,7 +9,7 @@
 #import "FeedCell.h"
 
 @implementation FeedCell
-@synthesize titre, source, resume;
+@synthesize titre, source, resume, date;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {

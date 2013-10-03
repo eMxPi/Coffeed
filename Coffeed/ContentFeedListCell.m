@@ -109,7 +109,7 @@
 
 
 #pragma mark ArticleViewController
--(void)retourArticlePressed {
+-(void)retourArticlePressed:(NSString *)id {
     if (articleView) {
         [UIView beginAnimations:nil context:nil];
         [UIView setAnimationDuration:1.0];

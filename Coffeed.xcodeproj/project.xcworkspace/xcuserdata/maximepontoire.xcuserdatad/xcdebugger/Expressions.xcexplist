@@ -3,6 +3,22 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "-[HomeViewController signInPressed:]:HomeViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[MachineUtil machineName]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "+[FeedlyUtils hasToRefresh]:FeedlyUtils.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "date+expires">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "-[ViewController connection:didReceiveData:]:ViewController.m">
          <PersistentStrings>
             <PersistentString
@@ -14,12 +30,7 @@
          contextName = "-[FeedViewController tableView:cellForRowAtIndexPath:]:FeedViewController.m">
       </ContextState>
       <ContextState
-         contextName = "-[HomeViewController signInPressed:]:HomeViewController.m">
-         <PersistentStrings>
-            <PersistentString
-               value = "[MachineUtil machineName]">
-            </PersistentString>
-         </PersistentStrings>
+         contextName = "+[FeedlyUtils saveToken:]:FeedlyUtils.m">
       </ContextState>
    </ContextStates>
 </VariablesViewState>

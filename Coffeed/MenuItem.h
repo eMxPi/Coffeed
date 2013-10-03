@@ -11,16 +11,18 @@
 @interface MenuItem : NSObject {
     NSString *text;
     UIImage *image;
-    BOOL isProfil;
-    BOOL isAdd;
+    BOOL isHome;
+    BOOL isLater;
     BOOL isDisconnect;
     BOOL isSettings;
+    BOOL isSubscribe;
 }
 @property (nonatomic, retain) NSString *text;
 @property (nonatomic, retain) UIImage *image;
-@property (nonatomic) BOOL isProfil;
-@property (nonatomic) BOOL isAdd;
+@property (nonatomic) BOOL isHome;
+@property (nonatomic) BOOL isLater;
 @property (nonatomic) BOOL isDisconnect;
 @property (nonatomic) BOOL isSettings;
+@property (nonatomic) BOOL isSubscribe;
 
 @end

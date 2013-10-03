@@ -3,21 +3,54 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "-[FeedViewController tableView:numberOfRowsInSection:]:FeedViewController.m">
+         contextName = "-[HomeViewController retrievePosition]:HomeViewController.m">
          <PersistentStrings>
             <PersistentString
-               value = "menuSource.count &gt; 0 ? menuSource.count : 1">
+               value = "[CLLocationManager locationServicesEnabled] != NO">
+            </PersistentString>
+            <PersistentString
+               value = "CLLocationManager">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "-[HomeViewController retrievePosition]:HomeViewController.m">
+         contextName = "-[FeedListViewController viewWillAppear:]:FeedListViewController.m">
          <PersistentStrings>
             <PersistentString
-               value = "CLLocationManager">
+               value = "[[PersistanceManager sharedPersistanceManager] getValueKey:nameTokenKey]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[HomeViewController returnToken:]:HomeViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "+[FeedlyUtils getAbonnements]:FeedlyUtils.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[[PersistanceManager sharedPersistanceManager] getValueKey:accessTokenKey]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "+[FeedlyUtils saveToken:]:FeedlyUtils.m">
+      </ContextState>
+      <ContextState
+         contextName = "__48-[HomeViewController connection:didReceiveData:]_block_invoke_2:HomeViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.view.frame.size.width">
             </PersistentString>
             <PersistentString
-               value = "[CLLocationManager locationServicesEnabled] != NO">
+               value = "[[UIScreen mainScreen] bounds].size.width">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[FeedViewController tableView:numberOfRowsInSection:]:FeedViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "menuSource.count &gt; 0 ? menuSource.count : 1">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

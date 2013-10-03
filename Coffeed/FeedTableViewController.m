@@ -32,6 +32,10 @@
     [feedTableView setDataSource:self];
 }
 
+-(void)viewWillAppear:(BOOL)animated {
+    [feedTableView reloadData];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -43,9 +47,19 @@
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (tableView == feedTableView) {
-        Feed *feed = [feedSource objectAtIndex:indexPath.row];
-        if (feed.isDay) {
-            return 44;
+        if (feedSource && [feedSource count] > 0) {
+            Feed *feed = [feedSource objectAtIndex:indexPath.row];
+            if (feed.isDay) {
+                return 25;
+            } else {
+                if ([feed.titre length] <= 31) {
+                    return 75;
+                } else if ([feed.titre length] <= 62) {
+                    return 88;
+                } else {
+                    return 102;
+                }
+            }
         } else {
             return 70;
         }
@@ -61,7 +75,11 @@
 // Customize the number of rows in the table view.
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if (tableView == feedTableView) {
-        return feedSource.count > 0 ? feedSource.count : 1;
+        if (feedSource) {
+            return feedSource.count > 0 ? feedSource.count : 1;
+        } else {
+            return 1;
+        }
     } else {
         return 0;
     }
@@ -99,6 +117,36 @@
             }
         }
     }
+    NSString *cellTwoIdentifier = @"feedTwoCell";
+    FeedTwoCell *cellTwo = [tableView dequeueReusableCellWithIdentifier:cellTwoIdentifier];
+    if (cellTwo == nil) {
+        
+        NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"FeedTwoCell" owner:nil options:nil];
+        
+        for(id currentObject in topLevelObjects)
+        {
+            if([currentObject isKindOfClass:[FeedTwoCell class]])
+            {
+                cellTwo = (FeedTwoCell *)currentObject;
+                break;
+            }
+        }
+    }
+    NSString *cellThreeIdentifier = @"feedThreeCell";
+    FeedThreeCell *cellThree = [tableView dequeueReusableCellWithIdentifier:cellThreeIdentifier];
+    if (cellThree == nil) {
+        
+        NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:@"FeedThreeCell" owner:nil options:nil];
+        
+        for(id currentObject in topLevelObjects)
+        {
+            if([currentObject isKindOfClass:[FeedThreeCell class]])
+            {
+                cellThree = (FeedThreeCell *)currentObject;
+                break;
+            }
+        }
+    }
     NSString *cellDayIdentifier = @"dayCell";
     DayCell *cellDay = [tableView dequeueReusableCellWithIdentifier:cellDayIdentifier];
     if (cellDay == nil) {
@@ -121,13 +169,25 @@
             cellDay.dayLabel.adjustsFontSizeToFitWidth = YES;
             return  cellDay;
         } else {
-            cell.titre.adjustsFontSizeToFitWidth = YES;
-            cell.resume.adjustsFontSizeToFitWidth = YES;
-            cell.source.adjustsFontSizeToFitWidth = YES;
-            [cell.titre setText:feed.titre];
-            [cell.resume setText:feed.resume];
-            [cell.source setText:feed.source];
-            return cell;
+            if ([feed.titre length] <= 31) {
+                [cell.titre setText:feed.titre];
+                [cell.resume setText:feed.resume];
+                [cell.source setText:feed.source];
+                [cell.date setText:[self formatDate:feed.date]];
+                return cell;
+            } else if ([feed.titre length] <= 62) {
+                [cellTwo.titre setText:feed.titre];
+                [cellTwo.resume setText:feed.resume];
+                [cellTwo.source setText:feed.source];
+                [cellTwo.date setText:[self formatDate:feed.date]];
+                return cellTwo;
+            } else {
+                [cellThree.titre setText:feed.titre];
+                [cellThree.resume setText:feed.resume];
+                [cellThree.source setText:feed.source];
+                [cellThree.date setText:[self formatDate:feed.date]];
+                return cellThree;
+            }
         }
     } else {
         cellEmpty.message.adjustsFontSizeToFitWidth = YES;
@@ -162,14 +222,33 @@
      [articleView.view setFrame:CGRectMake(0, 0, articleView.view.frame.size.width, articleView.view.frame.size.height)];
      [UIView commitAnimations];
      }*/
-    
-    NSDictionary *userInfo = [NSDictionary dictionaryWithObject:[NSNumber numberWithInt:indexPath.row] forKey:@"feed"];
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"displayFeed" object:nil userInfo:userInfo];
+    Feed *feed = [feedSource objectAtIndex:indexPath.row];
+    if (!feed.isDay) {
+        NSDictionary *userInfo = [NSDictionary dictionaryWithObject:feed.id forKey:@"feed"];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"displayFeed" object:nil userInfo:userInfo];
+    }
+}
+
+
+-(NSString *)formatDate:(NSString *)timestamp {
+    NSString *dateOut = @"";
+    NSDate *now = nil;
+    if (timestamp == nil || [timestamp isEqualToString:@""]) {
+        now = [NSDate date];
+    } else {
+        double time = [timestamp doubleValue];
+        time = time /1000;
+        now = [NSDate dateWithTimeIntervalSince1970:time];
+    }
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc]init];
+    [dateFormat setDateFormat:@"HH:mm"];
+    dateOut = [dateFormat stringFromDate:now];
+    return dateOut;
 }
 
 
 #pragma mark ArticleViewController
--(void)retourArticlePressed {
+-(void)retourArticlePressed:(NSString *)id{
     if (articleView) {
         [UIView beginAnimations:nil context:nil];
         [UIView setAnimationDuration:1.0];

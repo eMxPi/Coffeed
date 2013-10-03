@@ -21,7 +21,7 @@
 #import "FeedListViewController.h"
 
 @protocol FeedViewControllerDelegate;
-@interface FeedViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UIGestureRecognizerDelegate, SettingsViewControllerDelegate, FeedListViewControllerDelegate>
+@interface FeedViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UIGestureRecognizerDelegate, SettingsViewControllerDelegate, FeedListViewControllerDelegate, UIAlertViewDelegate>
 {
     id<FeedViewControllerDelegate>__unsafe_unretained delegate;
     IBOutlet UIImageView *backgroundImage;
@@ -29,6 +29,7 @@
     IBOutlet UITableView *feedTableView;
     IBOutlet UIView *darkView;
     NSMutableArray *feedSource;
+    NSMutableArray *subscriptionsSource;
     NSMutableArray *menuSource;
     IBOutlet UIView *rightView;
     BOOL isDeployed;
@@ -45,6 +46,8 @@
 
 @property (nonatomic, unsafe_unretained) id<FeedViewControllerDelegate>delegate;
 @property (nonatomic, retain) UIImage *imageBack;
+@property (nonatomic, retain) NSMutableArray *feedSource;
+@property (nonatomic, retain) NSMutableArray *subscriptionsSource;
 
 - (IBAction)menuPressed:(id)sender;
 

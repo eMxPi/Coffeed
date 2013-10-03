@@ -9,6 +9,6 @@
 #import "MenuItem.h"
 
 @implementation MenuItem
-@synthesize image, isAdd, isDisconnect, isProfil, text, isSettings;
+@synthesize image, isHome, isDisconnect, isLater, text, isSettings, isSubscribe;
 
 @end
